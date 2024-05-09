@@ -48,19 +48,26 @@
             this.label7 = new System.Windows.Forms.Label();
             this.searchTxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PendudukDgv = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PendudukDgv)).BeginInit();
             this.SuspendLayout();
             // 
             // KodpenTxt
             // 
             this.KodpenTxt.BackColor = System.Drawing.SystemColors.ControlLight;
             this.KodpenTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.KodpenTxt.Enabled = false;
             this.KodpenTxt.Font = new System.Drawing.Font("Poppins", 8.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KodpenTxt.Location = new System.Drawing.Point(48, 58);
             this.KodpenTxt.Multiline = true;
@@ -173,6 +180,7 @@
             this.CancelBtn.TabIndex = 29;
             this.CancelBtn.Text = "Kembali";
             this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // hapusBtn
             // 
@@ -186,6 +194,7 @@
             this.hapusBtn.TabIndex = 28;
             this.hapusBtn.Text = "Hapus";
             this.hapusBtn.UseVisualStyleBackColor = false;
+            this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
             // 
             // simpanBtn
             // 
@@ -199,6 +208,7 @@
             this.simpanBtn.TabIndex = 27;
             this.simpanBtn.Text = "Simpan";
             this.simpanBtn.UseVisualStyleBackColor = false;
+            this.simpanBtn.Click += new System.EventHandler(this.simpanBtn_Click);
             // 
             // pictureBox2
             // 
@@ -222,6 +232,7 @@
             this.NakelCmb.Name = "NakelCmb";
             this.NakelCmb.Size = new System.Drawing.Size(264, 31);
             this.NakelCmb.TabIndex = 33;
+            this.NakelCmb.SelectedIndexChanged += new System.EventHandler(this.NakelCmb_SelectedIndexChanged);
             // 
             // NaTpsCmb
             // 
@@ -254,6 +265,7 @@
             this.searchTxt.Name = "searchTxt";
             this.searchTxt.Size = new System.Drawing.Size(178, 30);
             this.searchTxt.TabIndex = 36;
+            this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
             // 
             // pictureBox1
             // 
@@ -266,18 +278,80 @@
             this.pictureBox1.TabIndex = 35;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // PendudukDgv
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 333);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(761, 162);
-            this.dataGridView1.TabIndex = 38;
+            this.PendudukDgv.AllowUserToAddRows = false;
+            this.PendudukDgv.AllowUserToDeleteRows = false;
+            this.PendudukDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PendudukDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.PendudukDgv.Location = new System.Drawing.Point(48, 333);
+            this.PendudukDgv.Name = "PendudukDgv";
+            this.PendudukDgv.ReadOnly = true;
+            this.PendudukDgv.RowHeadersWidth = 51;
+            this.PendudukDgv.RowTemplate.Height = 24;
+            this.PendudukDgv.Size = new System.Drawing.Size(761, 162);
+            this.PendudukDgv.TabIndex = 38;
+            this.PendudukDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PendudukDgv_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "kode_penduduk";
+            this.Column1.HeaderText = "Kode Penduduk";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "nama_penduduk";
+            this.Column2.HeaderText = "Nama Penduduk";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "nik";
+            this.Column3.HeaderText = "NIK";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "alamat_penduduk";
+            this.Column4.HeaderText = "Alamat Penduduk";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "nama_kelurahan";
+            this.Column5.HeaderText = "Nama Kelurahan";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "nama_tps";
+            this.Column6.HeaderText = "Nama TPS";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 125;
             // 
             // label8
             // 
@@ -319,7 +393,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.PendudukDgv);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.searchTxt);
             this.Controls.Add(this.pictureBox1);
@@ -343,9 +417,10 @@
             this.Name = "PendudukFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PendudukFrm";
+            this.Load += new System.EventHandler(this.PendudukFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PendudukDgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -372,9 +447,15 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox searchTxt;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView PendudukDgv;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

@@ -259,6 +259,7 @@
             this.searchTxt.Name = "searchTxt";
             this.searchTxt.Size = new System.Drawing.Size(594, 30);
             this.searchTxt.TabIndex = 29;
+            this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
             // 
             // pictureBox1
             // 

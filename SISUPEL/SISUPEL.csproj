@@ -54,6 +54,7 @@
     <Compile Include="Config\LayananCls.cs" />
     <Compile Include="Models\kelurahanCls.cs" />
     <Compile Include="Models\LoginCls.cs" />
+    <Compile Include="Models\PendudukCls.cs" />
     <Compile Include="Models\TPSCls.cs" />
     <Compile Include="Views\DashboardFrm.cs">
       <SubType>Form</SubType>

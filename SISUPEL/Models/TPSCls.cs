@@ -148,5 +148,28 @@ namespace SISUPEL.Models
             catch (Exception e) { }
             return result;
         }
+
+        public string ambilkodeDgnama(string nama)
+        {
+            string kode = "";
+
+            Query = "SELECT kode_tps FROM tps WHERE " + " nama_tps='" + nama + "'";
+            temp = server.eksekusiQuery(Query);
+
+            if (temp.Rows.Count > 0)
+            {
+                foreach (DataRow data in temp.Rows)
+                {
+                    kode = data[0].ToString();
+                }
+            }
+            return kode;
+        }
+        public DataTable searchdata(string nama)
+        {
+
+            Query = "SELECT * FROM tps WHERE nama_tps LIKE'%" + nama + "%'";
+            return server.eksekusiQuery(Query);
+        }
     }
 }

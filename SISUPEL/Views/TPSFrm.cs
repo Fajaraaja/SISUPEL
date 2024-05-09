@@ -37,7 +37,15 @@ namespace SISUPEL.Views
 
         void tampilgrid()
         {
-            TPSDgv.DataSource = tps.tampildata();
+            if (searchTxt.Text == "")
+            {
+                TPSDgv.DataSource = tps.tampildata();
+            }
+            else
+            {
+                TPSDgv.DataSource = tps.searchdata(searchTxt.Text);
+            }
+
         }
 
         void clear()
@@ -118,7 +126,7 @@ namespace SISUPEL.Views
                 if (MessageBox.Show("Apakah yakin akan dihapus?",
                     "KONFIRMASI", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (kelurahan.hapusdata(kodtpsTxt.Text) > 0)
+                    if (tps.hapusdata(kodtpsTxt.Text) > 0)
                     {
                         MessageBox.Show("Data Berhasil dihapus,",
                           "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -140,6 +148,11 @@ namespace SISUPEL.Views
         private void CancelBtn_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        private void searchTxt_TextChanged(object sender, EventArgs e)
+        {
+            tampilgrid();
         }
     }
 }
