@@ -178,7 +178,7 @@
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(125, 41);
             this.CancelBtn.TabIndex = 29;
-            this.CancelBtn.Text = "Kembali";
+            this.CancelBtn.Text = "Batal";
             this.CancelBtn.UseVisualStyleBackColor = false;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
@@ -249,7 +249,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(486, 275);
+            this.label7.Location = new System.Drawing.Point(715, 233);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 30);
             this.label7.TabIndex = 37;
@@ -260,10 +260,10 @@
             this.searchTxt.BackColor = System.Drawing.SystemColors.ControlLight;
             this.searchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchTxt.Font = new System.Drawing.Font("Poppins", 8.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxt.Location = new System.Drawing.Point(631, 272);
+            this.searchTxt.Location = new System.Drawing.Point(521, 275);
             this.searchTxt.Multiline = true;
             this.searchTxt.Name = "searchTxt";
-            this.searchTxt.Size = new System.Drawing.Size(178, 30);
+            this.searchTxt.Size = new System.Drawing.Size(286, 30);
             this.searchTxt.TabIndex = 36;
             this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
             // 
@@ -271,7 +271,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(584, 272);
+            this.pictureBox1.Location = new System.Drawing.Point(477, 275);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

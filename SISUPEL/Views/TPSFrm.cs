@@ -43,7 +43,7 @@ namespace SISUPEL.Views
             }
             else
             {
-                TPSDgv.DataSource = tps.searchdata(searchTxt.Text);
+                TPSDgv.DataSource = tps.searchdata(searchTxt.Text,searchTxt.Text);
             }
 
         }
@@ -53,6 +53,7 @@ namespace SISUPEL.Views
             kodtpsTxt.Text = tps.buatkode();
             natpsTxt.Clear();
             natpsTxt.Select();
+            NakelCmb.ResetText();
         }
 
         private void TPSFrm_Load(object sender, EventArgs e)

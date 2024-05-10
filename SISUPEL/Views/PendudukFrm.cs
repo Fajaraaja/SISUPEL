@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SISUPEL.Views
 {
@@ -31,7 +32,7 @@ namespace SISUPEL.Views
             }
             else
             {
-                PendudukDgv.DataSource = penduduk.searchdata(searchTxt.Text);
+                PendudukDgv.DataSource = penduduk.searchdata(searchTxt.Text, searchTxt.Text, searchTxt.Text);
             }
         }
 
@@ -88,6 +89,8 @@ namespace SISUPEL.Views
             NikTxt.Clear();
             AlamatTxt.Clear();
             NapenTxt.Select();
+            NakelCmb.ResetText();
+            NaTpsCmb.ResetText();
         }
 
         private void NakelCmb_SelectedIndexChanged(object sender, EventArgs e)

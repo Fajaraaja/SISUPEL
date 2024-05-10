@@ -165,10 +165,12 @@ namespace SISUPEL.Models
             }
             return kode;
         }
-        public DataTable searchdata(string nama)
+        public DataTable searchdata(string nama, string kelurahan)
         {
 
-            Query = "SELECT * FROM tps WHERE nama_tps LIKE'%" + nama + "%'";
+            Query = "SELECT t.kode_tps, t.nama_tps, k.nama_kelurahan FROM tps t JOIN kelurahan k " +
+                    "ON t.kode_kelurahan = k.kode_kelurahan WHERE t.nama_tps LIKE '%" + nama + "%' OR k.nama_kelurahan " +
+                    "LIKE '%" + kelurahan + "%'";
             return server.eksekusiQuery(Query);
         }
     }

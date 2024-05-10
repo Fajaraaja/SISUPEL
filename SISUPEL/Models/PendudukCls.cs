@@ -83,9 +83,9 @@ namespace SISUPEL.Models
 
         public DataTable getallpenduduk()
         {
-            Query = "SELECT a.kode_penduduk, a.nama_penduduk, a.nik, a.alamat_penduduk, " +
-                "b.nama_kelurahan, c.nama_tps FROM penduduk a, kelurahan b, tps c " +
-                "WHERE a.kode_kelurahan = b.kode_kelurahan AND a.kode_tps = c.kode_tps";
+            Query = "SELECT p.kode_penduduk, p.nama_penduduk, p.nik, p.alamat_penduduk,k.nama_kelurahan, t.nama_tps FROM penduduk p " +
+                    "JOIN kelurahan k ON p.kode_kelurahan = k.kode_kelurahan JOIN tps t ON p.kode_tps = t.kode_tps";
+
             return server.eksekusiQuery(Query);
         }
 
@@ -123,7 +123,7 @@ namespace SISUPEL.Models
         public int updatedata(string kode)
         {
             int result = -1;
-            Query = "UPDATE tps SET nama_penduduk = '" + nama_penduduk + "' , nik = '" + nik + "' , alamat_penduduk = '" + alamat_penduduk + "'," +
+            Query = "UPDATE penduduk SET nama_penduduk = '" + nama_penduduk + "' , nik = '" + nik + "' , alamat_penduduk = '" + alamat_penduduk + "'," +
                 " kode_kelurahan = '" + kode_kelurahan + "', kode_tps = '" + kode_tps + "'  WHERE kode_penduduk = '" + kode + "'";
             try
             {
@@ -180,10 +180,12 @@ namespace SISUPEL.Models
             return kode;
         }
 
-        public DataTable searchdata(string nama)
+        public DataTable searchdata(string nama, string kode, string tps)
         {
+            Query = "SELECT p.kode_penduduk, p.nama_penduduk, p.nik, p.alamat_penduduk, k.nama_kelurahan, t.nama_tps FROM penduduk p " +
+                    "JOIN kelurahan k ON p.kode_kelurahan = k.kode_kelurahan JOIN tps t ON p.kode_tps = t.kode_tps " +
+                    "WHERE p.nama_penduduk LIKE '%" + nama + "%' OR k.nama_kelurahan LIKE '%" + kode + "%' OR t.nama_tps LIKE '%" +tps+ "%'";
 
-            Query = "SELECT * FROM penduduk WHERE nama_penduduk LIKE'%" + nama + "%'";
             return server.eksekusiQuery(Query);
         }
 
