@@ -62,6 +62,18 @@
     <Compile Include="Views\DashboardFrm.Designer.cs">
       <DependentUpon>DashboardFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DashboardUserFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashboardUserFrm.Designer.cs">
+      <DependentUpon>DashboardUserFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataPendudukFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DataPendudukFrm.Designer.cs">
+      <DependentUpon>DataPendudukFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\KelurahanFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,9 +114,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\DashboardFrm.resx">
       <DependentUpon>DashboardFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardUserFrm.resx">
+      <DependentUpon>DashboardUserFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DataPendudukFrm.resx">
+      <DependentUpon>DataPendudukFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\KelurahanFrm.resx">
       <DependentUpon>KelurahanFrm.cs</DependentUpon>
@@ -134,6 +153,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo_dark_siakba2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

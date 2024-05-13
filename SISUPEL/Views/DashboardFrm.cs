@@ -23,6 +23,7 @@ namespace SISUPEL.Views
             kelurahan.TopLevel = false;
             panel1.Controls.Clear();
             panel1.Controls.Add(kelurahan);
+            kelurahan.Dock = DockStyle.Fill;
             kelurahan.Show();
         }
 
@@ -40,15 +41,17 @@ namespace SISUPEL.Views
             panel1.Controls.Clear();
             tps.TopLevel = false;
             panel1.Controls.Add(tps);
+            tps.Dock = DockStyle.Fill;
             tps.Show();
         }
 
         private void PendudukToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PendudukFrm penduduk = new PendudukFrm();
+            DataPendudukFrm penduduk = new DataPendudukFrm();
             panel1.Controls.Clear();
             penduduk.TopLevel = false;
             panel1.Controls.Add(penduduk);
+            penduduk.Dock = DockStyle.Fill;
             penduduk.Show();
         }
     }

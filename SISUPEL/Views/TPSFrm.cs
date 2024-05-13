@@ -66,8 +66,11 @@ namespace SISUPEL.Views
             TPSDgv.EnableHeadersVisualStyles = false;
             TPSDgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(32, 32, 48);
             TPSDgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            TPSDgv.ColumnHeadersDefaultCellStyle.Font = new Font("poppins", 9, FontStyle.Bold);
+            TPSDgv.ColumnHeadersDefaultCellStyle.Font = new Font("poppins", 10, FontStyle.Bold);
             TPSDgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            TPSDgv.DefaultCellStyle.Font = new Font("poppins", 9); // Menetapkan font dan ukuran font untuk sel-sel
+
         }
 
         private void simpanBtn_Click(object sender, EventArgs e)

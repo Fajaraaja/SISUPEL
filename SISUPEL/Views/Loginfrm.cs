@@ -33,8 +33,8 @@ namespace SISUPEL.Views
                 }
                 else
                 {
-                    Splashscreenfrm splash = new Splashscreenfrm();
-                    splash.Show();
+                    DashboardUserFrm dashboard = new DashboardUserFrm();
+                    dashboard.Show();
                     this.Hide();
 
                 }

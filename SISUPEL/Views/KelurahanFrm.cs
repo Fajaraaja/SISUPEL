@@ -95,8 +95,10 @@ namespace SISUPEL.Views
             kelurahanDgv.EnableHeadersVisualStyles = false;
             kelurahanDgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(32, 32, 48);
             kelurahanDgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            kelurahanDgv.ColumnHeadersDefaultCellStyle.Font = new Font("poppins", 9, FontStyle.Bold);
+            kelurahanDgv.ColumnHeadersDefaultCellStyle.Font = new Font("poppins", 10, FontStyle.Bold);
             kelurahanDgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            kelurahanDgv.DefaultCellStyle.Font = new Font("poppins", 9); // Menetapkan font dan ukuran font untuk sel-sel
         }
 
         private void kelurahanDgv_CellClick(object sender, DataGridViewCellEventArgs e)

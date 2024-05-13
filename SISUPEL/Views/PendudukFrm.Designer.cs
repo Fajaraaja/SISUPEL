@@ -389,6 +389,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(845, 546);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label8);
@@ -414,6 +415,7 @@
             this.Controls.Add(this.KodpenTxt);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1753, 1049);
             this.Name = "PendudukFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PendudukFrm";
