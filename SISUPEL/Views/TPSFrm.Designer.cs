@@ -123,6 +123,7 @@
             this.CancelBtn.TabIndex = 74;
             this.CancelBtn.Text = "Batal";
             this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // hapusBtn
             // 
@@ -136,6 +137,7 @@
             this.hapusBtn.TabIndex = 73;
             this.hapusBtn.Text = "Hapus";
             this.hapusBtn.UseVisualStyleBackColor = false;
+            this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
             // 
             // simpanBtn
             // 
@@ -149,6 +151,7 @@
             this.simpanBtn.TabIndex = 72;
             this.simpanBtn.Text = "Simpan";
             this.simpanBtn.UseVisualStyleBackColor = false;
+            this.simpanBtn.Click += new System.EventHandler(this.simpanBtn_Click);
             // 
             // NakelCmb
             // 
@@ -286,6 +289,7 @@
             this.TPSDgv.RowTemplate.Height = 24;
             this.TPSDgv.Size = new System.Drawing.Size(845, 255);
             this.TPSDgv.TabIndex = 73;
+            this.TPSDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TPSDgv_CellClick);
             // 
             // kode_tps
             // 

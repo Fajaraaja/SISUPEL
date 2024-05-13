@@ -54,8 +54,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(157, 540);
-            this.menuStrip1.Stretch = false;
+            this.menuStrip1.Size = new System.Drawing.Size(159, 540);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -122,11 +121,10 @@
             // 
             // panel1
             // 
-            this.panel1.AutoSize = true;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(157, 0);
+            this.panel1.Location = new System.Drawing.Point(159, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(842, 540);
+            this.panel1.Size = new System.Drawing.Size(840, 540);
             this.panel1.TabIndex = 3;
             // 
             // DashboardFrm

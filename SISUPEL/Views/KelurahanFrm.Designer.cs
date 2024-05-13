@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KelurahanFrm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.searchTxt = new System.Windows.Forms.TextBox();
@@ -94,6 +94,7 @@
             this.searchTxt.Name = "searchTxt";
             this.searchTxt.Size = new System.Drawing.Size(569, 30);
             this.searchTxt.TabIndex = 28;
+            this.searchTxt.Click += new System.EventHandler(this.searchTxt_TextChanged);
             this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
             // 
             // pictureBox1
@@ -119,6 +120,7 @@
             this.CancelBtn.TabIndex = 26;
             this.CancelBtn.Text = "Batal";
             this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
             // hapusBtn
             // 
@@ -132,6 +134,7 @@
             this.hapusBtn.TabIndex = 25;
             this.hapusBtn.Text = "Hapus";
             this.hapusBtn.UseVisualStyleBackColor = false;
+            this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
             // 
             // nakelTxt
             // 
@@ -156,6 +159,7 @@
             this.simpanBtn.TabIndex = 23;
             this.simpanBtn.Text = "Simpan";
             this.simpanBtn.UseVisualStyleBackColor = false;
+            this.simpanBtn.Click += new System.EventHandler(this.simpanBtn_Click);
             // 
             // label2
             // 
@@ -258,6 +262,7 @@
             this.kelurahanDgv.RowTemplate.Height = 24;
             this.kelurahanDgv.Size = new System.Drawing.Size(845, 252);
             this.kelurahanDgv.TabIndex = 7;
+            this.kelurahanDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kelurahanDgv_CellClick);
             // 
             // kode_kelurahan
             // 
@@ -271,8 +276,8 @@
             // nama_kelurahan
             // 
             this.nama_kelurahan.DataPropertyName = "nama_kelurahan";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nama_kelurahan.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nama_kelurahan.DefaultCellStyle = dataGridViewCellStyle2;
             this.nama_kelurahan.HeaderText = "Nama Kelurahan";
             this.nama_kelurahan.MinimumWidth = 6;
             this.nama_kelurahan.Name = "nama_kelurahan";

@@ -50,7 +50,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(141, 540);
+            this.menuStrip1.Size = new System.Drawing.Size(158, 540);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
@@ -63,7 +63,7 @@
             this.fileToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.fileToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 7, 0, 7);
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(143, 54);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(126, 54);
             this.fileToolStripMenuItem.Text = "SISUPEL";
             this.fileToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -75,7 +75,7 @@
             this.PendudukToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PendudukToolStripMenuItem.Margin = new System.Windows.Forms.Padding(3, 5, 0, 0);
             this.PendudukToolStripMenuItem.Name = "PendudukToolStripMenuItem";
-            this.PendudukToolStripMenuItem.Size = new System.Drawing.Size(123, 30);
+            this.PendudukToolStripMenuItem.Size = new System.Drawing.Size(140, 30);
             this.PendudukToolStripMenuItem.Text = "Penduduk";
             this.PendudukToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PendudukToolStripMenuItem.Click += new System.EventHandler(this.PendudukToolStripMenuItem_Click);
@@ -84,7 +84,7 @@
             // 
             this.logOutToolStripMenuItem.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.logOutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 265, 0, 0);
+            this.logOutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 650, 0, 0);
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(143, 30);
             this.logOutToolStripMenuItem.Text = "Log Out";
@@ -92,11 +92,10 @@
             // 
             // panel1
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.Location = new System.Drawing.Point(138, 0);
-            this.panel1.MaximumSize = new System.Drawing.Size(1753, 1049);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(158, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(861, 540);
+            this.panel1.Size = new System.Drawing.Size(841, 540);
             this.panel1.TabIndex = 4;
             // 
             // DashboardUserFrm
@@ -104,12 +103,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 540);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DashboardUserFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SISUPEL - Sistem Informasi Surat Undangan Pemilu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

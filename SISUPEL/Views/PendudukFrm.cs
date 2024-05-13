@@ -46,8 +46,10 @@ namespace SISUPEL.Views
             PendudukDgv.EnableHeadersVisualStyles = false;
             PendudukDgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(32, 32, 48);
             PendudukDgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            PendudukDgv.ColumnHeadersDefaultCellStyle.Font = new Font("poppins", 9, FontStyle.Bold);
+            PendudukDgv.ColumnHeadersDefaultCellStyle.Font = new Font("poppins", 10, FontStyle.Bold);
             PendudukDgv.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            PendudukDgv.DefaultCellStyle.Font = new Font("poppins", 9); // Menetapkan font dan ukuran font untuk sel-sel
         }
 
         void combokelurahan()

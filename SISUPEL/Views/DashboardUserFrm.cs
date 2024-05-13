@@ -31,6 +31,7 @@ namespace SISUPEL.Views
             PendudukFrm penduduk = new PendudukFrm();
             penduduk.TopLevel = false;
             panel1.Controls.Add( penduduk );
+            penduduk.Dock = DockStyle.Fill;
             penduduk.Show();
         }
     }
