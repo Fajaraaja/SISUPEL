@@ -65,10 +65,10 @@
             // 
             // cetakBtn
             // 
-            this.cetakBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.cetakBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.cetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cetakBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.cetakBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.cetakBtn.Location = new System.Drawing.Point(679, 30);
             this.cetakBtn.Name = "cetakBtn";
             this.cetakBtn.Size = new System.Drawing.Size(143, 41);

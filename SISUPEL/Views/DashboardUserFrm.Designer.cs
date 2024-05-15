@@ -50,7 +50,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(158, 540);
+            this.menuStrip1.Size = new System.Drawing.Size(141, 540);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
@@ -75,7 +75,7 @@
             this.PendudukToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PendudukToolStripMenuItem.Margin = new System.Windows.Forms.Padding(3, 5, 0, 0);
             this.PendudukToolStripMenuItem.Name = "PendudukToolStripMenuItem";
-            this.PendudukToolStripMenuItem.Size = new System.Drawing.Size(140, 30);
+            this.PendudukToolStripMenuItem.Size = new System.Drawing.Size(123, 30);
             this.PendudukToolStripMenuItem.Text = "Penduduk";
             this.PendudukToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PendudukToolStripMenuItem.Click += new System.EventHandler(this.PendudukToolStripMenuItem_Click);
@@ -86,16 +86,16 @@
             this.logOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
             this.logOutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 650, 0, 0);
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(143, 30);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(126, 30);
             this.logOutToolStripMenuItem.Text = "Log Out";
             this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(158, 0);
+            this.panel1.Location = new System.Drawing.Point(141, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(841, 540);
+            this.panel1.Size = new System.Drawing.Size(858, 540);
             this.panel1.TabIndex = 4;
             // 
             // DashboardUserFrm

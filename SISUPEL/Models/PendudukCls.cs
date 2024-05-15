@@ -188,6 +188,5 @@ namespace SISUPEL.Models
 
             return server.eksekusiQuery(Query);
         }
-
     }
-}
+} 

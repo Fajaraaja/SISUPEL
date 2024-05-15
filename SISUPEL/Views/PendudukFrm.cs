@@ -103,8 +103,10 @@ namespace SISUPEL.Views
 
         private void simpanBtn_Click(object sender, EventArgs e)
         {
+            // Periksa apakah data penduduk sudah ada
             if (!penduduk.Apakahada(KodpenTxt.Text))
             {
+                // Set data penduduk dari input
                 penduduk.setkode_penduduk = KodpenTxt.Text;
                 penduduk.setnama_penduduk = NapenTxt.Text;
                 penduduk.setnik = NikTxt.Text;
@@ -112,40 +114,71 @@ namespace SISUPEL.Views
                 penduduk.setkode_kelurahan = kelurahan.ambilkodeDgnama(NakelCmb.Text);
                 penduduk.setkode_tps = tps.ambilkodeDgnama(NaTpsCmb.Text);
 
-                if (penduduk.savedata() > 0)
+                try
                 {
-                    MessageBox.Show("Data Berhasil Disimpan,",
-                        "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
-                    tampilgrid();
+                    string kod = NikTxt.Text.Substring(10, 2);
+                    int kodInt = int.Parse(kod);
+
+                    if (kodInt <= 24)
+                    {
+                        kodInt += 2000;
+                    }
+                    else
+                    {
+                        kodInt += 1900;
+                    }
+
+                    int tahunLahir = kodInt;
+                    int tahunSekarang = DateTime.Now.Year;
+                    int umur = tahunSekarang - tahunLahir;
+
+                    // Validasi umur
+                    if (umur < 17)
+                    {
+                        MessageBox.Show("Data Pencoblos Belum Cukup Umur", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clear();
+                        tampilgrid();
+                    }
+                    else
+                    {
+                        // Simpan data penduduk
+                        if (penduduk.savedata() > 0)
+                        {
+                            MessageBox.Show("Data Berhasil Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clear();
+                            tampilgrid();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Data Gagal Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clear();
+                            tampilgrid();
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Data Gagal Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clear();
-                    tampilgrid();
-
+                    MessageBox.Show("Error: " + ex.Message, "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
             else
             {
-                if (MessageBox.Show("Apakah Data akan diubah?",
-                    "KONFIRMASI", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Apakah Data akan diubah?", "KONFIRMASI", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
+                    // Set data penduduk dari input
                     penduduk.setkode_penduduk = KodpenTxt.Text;
                     penduduk.setnama_penduduk = NapenTxt.Text;
                     penduduk.setnik = NikTxt.Text;
                     penduduk.setalamat_penduduk = AlamatTxt.Text;
                     penduduk.setkode_kelurahan = kelurahan.ambilkodeDgnama(NakelCmb.Text);
                     penduduk.setkode_tps = tps.ambilkodeDgnama(NaTpsCmb.Text);
+
+                    // Perbarui data penduduk
                     if (penduduk.updatedata(KodpenTxt.Text) > 0)
                     {
-                        MessageBox.Show("Data Berhasil Disimpan,",
-                       "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Data Berhasil Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clear();
                         tampilgrid();
-
                     }
                     else
                     {
@@ -155,6 +188,7 @@ namespace SISUPEL.Views
                     }
                 }
             }
+
         }
 
         private void hapusBtn_Click(object sender, EventArgs e)
