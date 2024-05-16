@@ -137,7 +137,7 @@ namespace SISUPEL.Views
                     // Validasi umur
                     if (umur < 17)
                     {
-                        MessageBox.Show("Data Pencoblos Belum Cukup Umur", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Pencoblos Belum Cukup Umur", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         clear();
                         tampilgrid();
                     }

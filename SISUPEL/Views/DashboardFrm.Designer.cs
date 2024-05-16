@@ -54,19 +54,20 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(159, 540);
+            this.menuStrip1.Size = new System.Drawing.Size(157, 605);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.fileToolStripMenuItem.Image = global::SISUPEL.Properties.Resources.logo_dark_siakba2;
+            this.fileToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("fileToolStripMenuItem.Image")));
             this.fileToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.fileToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.fileToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 7, 0, 7);
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(144, 54);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(144, 95);
             this.fileToolStripMenuItem.Text = "SISUPEL";
             this.fileToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
@@ -113,7 +114,7 @@
             // 
             this.logOutToolStripMenuItem.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.logOutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 600, 0, 0);
+            this.logOutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 550, 0, 0);
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             this.logOutToolStripMenuItem.Size = new System.Drawing.Size(144, 30);
             this.logOutToolStripMenuItem.Text = "Log Out";
@@ -122,16 +123,16 @@
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(159, 0);
+            this.panel1.Location = new System.Drawing.Point(157, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(840, 540);
+            this.panel1.Size = new System.Drawing.Size(842, 605);
             this.panel1.TabIndex = 3;
             // 
             // DashboardFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 540);
+            this.ClientSize = new System.Drawing.Size(999, 605);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

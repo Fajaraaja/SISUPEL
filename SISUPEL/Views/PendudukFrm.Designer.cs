@@ -88,7 +88,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(845, 327);
+            this.panel2.Size = new System.Drawing.Size(845, 319);
             this.panel2.TabIndex = 42;
             // 
             // searchTxt
@@ -96,7 +96,7 @@
             this.searchTxt.BackColor = System.Drawing.SystemColors.ControlLight;
             this.searchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchTxt.Font = new System.Drawing.Font("Poppins", 8.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxt.Location = new System.Drawing.Point(518, 273);
+            this.searchTxt.Location = new System.Drawing.Point(519, 270);
             this.searchTxt.Multiline = true;
             this.searchTxt.Name = "searchTxt";
             this.searchTxt.Size = new System.Drawing.Size(286, 30);
@@ -107,7 +107,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(474, 273);
+            this.pictureBox1.Location = new System.Drawing.Point(475, 270);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -237,9 +237,9 @@
             this.label3.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(40, 181);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 30);
+            this.label3.Size = new System.Drawing.Size(151, 30);
             this.label3.TabIndex = 42;
-            this.label3.Text = "NIK";
+            this.label3.Text = "NIK (16 Karakter)";
             // 
             // NapenTxt
             // 
@@ -290,9 +290,9 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 496);
+            this.panel1.Location = new System.Drawing.Point(0, 503);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(845, 50);
+            this.panel1.Size = new System.Drawing.Size(845, 43);
             this.panel1.TabIndex = 43;
             // 
             // panel3
@@ -332,9 +332,9 @@
             // 
             this.panel4.Controls.Add(this.PendudukDgv);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 327);
+            this.panel4.Location = new System.Drawing.Point(0, 319);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(845, 169);
+            this.panel4.Size = new System.Drawing.Size(845, 184);
             this.panel4.TabIndex = 44;
             // 
             // PendudukDgv
@@ -355,8 +355,8 @@
             this.PendudukDgv.ReadOnly = true;
             this.PendudukDgv.RowHeadersWidth = 51;
             this.PendudukDgv.RowTemplate.Height = 24;
-            this.PendudukDgv.Size = new System.Drawing.Size(845, 169);
-            this.PendudukDgv.TabIndex = 39;
+            this.PendudukDgv.Size = new System.Drawing.Size(845, 184);
+            this.PendudukDgv.TabIndex = 41;
             this.PendudukDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PendudukDgv_CellClick);
             // 
             // Column1
@@ -420,8 +420,8 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(845, 546);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1753, 1049);
             this.Name = "PendudukFrm";

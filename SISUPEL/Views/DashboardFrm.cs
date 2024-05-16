@@ -17,6 +17,15 @@ namespace SISUPEL.Views
             InitializeComponent();
         }
 
+        public void menuset(bool mn1, bool mn2,bool mn3,bool mn4)
+        {
+            KelurahanToolStripMenuItem.Visible = mn1;
+            TPSToolStripMenuItem.Visible = mn2;
+            PendudukToolStripMenuItem.Visible = mn3;
+            logOutToolStripMenuItem.Visible = mn4;
+
+        }
+
         private void KelurahanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             KelurahanFrm kelurahan = new KelurahanFrm();
@@ -47,7 +56,7 @@ namespace SISUPEL.Views
 
         private void PendudukToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DataPendudukFrm penduduk = new DataPendudukFrm();
+            PendudukFrm penduduk = new PendudukFrm();
             panel1.Controls.Clear();
             penduduk.TopLevel = false;
             panel1.Controls.Add(penduduk);

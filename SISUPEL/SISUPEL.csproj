@@ -62,18 +62,6 @@
     <Compile Include="Views\DashboardFrm.Designer.cs">
       <DependentUpon>DashboardFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\DashboardUserFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\DashboardUserFrm.Designer.cs">
-      <DependentUpon>DashboardUserFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DataPendudukFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\DataPendudukFrm.Designer.cs">
-      <DependentUpon>DataPendudukFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\KelurahanFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +106,6 @@
     </Compile>
     <EmbeddedResource Include="Views\DashboardFrm.resx">
       <DependentUpon>DashboardFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\DashboardUserFrm.resx">
-      <DependentUpon>DashboardUserFrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\DataPendudukFrm.resx">
-      <DependentUpon>DataPendudukFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\KelurahanFrm.resx">
       <DependentUpon>KelurahanFrm.cs</DependentUpon>
