@@ -66,14 +66,17 @@
             // cetakBtn
             // 
             this.cetakBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cetakBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.cetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cetakBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cetakBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cetakBtn.Location = new System.Drawing.Point(679, 30);
             this.cetakBtn.Name = "cetakBtn";
             this.cetakBtn.Size = new System.Drawing.Size(143, 41);
             this.cetakBtn.TabIndex = 45;
             this.cetakBtn.Text = "Cetak";
+            this.cetakBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.cetakBtn.UseVisualStyleBackColor = false;
             // 
             // searchTxt

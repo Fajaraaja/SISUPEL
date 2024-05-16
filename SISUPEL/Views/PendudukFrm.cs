@@ -117,9 +117,12 @@ namespace SISUPEL.Views
                 try
                 {
                     string kod = NikTxt.Text.Substring(10, 2);
+                    int tahunSekarang = DateTime.Now.Year;
+                    string tahus = tahunSekarang.ToString().Substring(2,2);
+                    int tahuns = int.Parse(tahus);
                     int kodInt = int.Parse(kod);
 
-                    if (kodInt <= 24)
+                    if (kodInt <= tahuns)
                     {
                         kodInt += 2000;
                     }
@@ -129,7 +132,6 @@ namespace SISUPEL.Views
                     }
 
                     int tahunLahir = kodInt;
-                    int tahunSekarang = DateTime.Now.Year;
                     int umur = tahunSekarang - tahunLahir;
 
                     // Validasi umur
