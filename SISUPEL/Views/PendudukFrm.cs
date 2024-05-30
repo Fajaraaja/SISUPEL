@@ -1,4 +1,5 @@
 ﻿using SISUPEL.Models;
+using SISUPEL.Report;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -230,6 +231,13 @@ namespace SISUPEL.Views
         private void searchTxt_TextChanged(object sender, EventArgs e)
         {
             tampilgrid();
+        }
+
+        private void CetakBtn_Click(object sender, EventArgs e)
+        {
+            CetakpendudukFrm penduduk = new CetakpendudukFrm();
+            penduduk.kode = KodpenTxt.Text;
+            penduduk.ShowDialog();
         }
     }
 }

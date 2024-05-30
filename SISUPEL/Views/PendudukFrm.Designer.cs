@@ -59,6 +59,7 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CetakBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -68,6 +69,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.CetakBtn);
             this.panel2.Controls.Add(this.searchTxt);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.NaTpsCmb);
@@ -413,6 +415,20 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 250;
             // 
+            // CetakBtn
+            // 
+            this.CetakBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.CetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CetakBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.CetakBtn.Location = new System.Drawing.Point(629, 203);
+            this.CetakBtn.Name = "CetakBtn";
+            this.CetakBtn.Size = new System.Drawing.Size(125, 41);
+            this.CetakBtn.TabIndex = 55;
+            this.CetakBtn.Text = "Cetak";
+            this.CetakBtn.UseVisualStyleBackColor = false;
+            this.CetakBtn.Click += new System.EventHandler(this.CetakBtn_Click);
+            // 
             // PendudukFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -470,5 +486,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button CetakBtn;
     }
 }
