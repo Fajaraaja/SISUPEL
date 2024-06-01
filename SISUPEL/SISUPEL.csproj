@@ -68,11 +68,17 @@
     <Compile Include="Report\CetakpendudukFrm.Designer.cs">
       <DependentUpon>CetakpendudukFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report\PendudukCrp.cs">
+    <Compile Include="Report\CrystalReport1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PendudukCrp.rpt</DependentUpon>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\PrintFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\PrintFrm.Designer.cs">
+      <DependentUpon>PrintFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\DashboardFrm.cs">
       <SubType>Form</SubType>
@@ -125,9 +131,12 @@
     <EmbeddedResource Include="Report\CetakpendudukFrm.resx">
       <DependentUpon>CetakpendudukFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\PendudukCrp.rpt">
+    <EmbeddedResource Include="Report\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>PendudukCrp.cs</LastGenOutput>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\PrintFrm.resx">
+      <DependentUpon>PrintFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DashboardFrm.resx">
       <DependentUpon>DashboardFrm.cs</DependentUpon>

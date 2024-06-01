@@ -52,6 +52,7 @@ namespace SISUPEL.Views
         {
             kodtpsTxt.Text = tps.buatkode();
             natpsTxt.Clear();
+            AlamatTpsTXT.Clear();
             natpsTxt.Select();
             NakelCmb.ResetText();
         }
@@ -80,6 +81,7 @@ namespace SISUPEL.Views
             {
                 tps.setkode_tps = kodtpsTxt.Text;
                 tps.setnama_tps = natpsTxt.Text;
+                tps.setalamat_tps = AlamatTpsTXT.Text;
                 tps.setkode_kelurahan = kelurahan.ambilkodeDgnama(NakelCmb.Text);
                 if (tps.tambahdata() > 0)
                 {
@@ -104,6 +106,7 @@ namespace SISUPEL.Views
                 {
                     tps.setkode_tps = kodtpsTxt.Text;
                     tps.setnama_tps = natpsTxt.Text;
+                    tps.setalamat_tps= AlamatTpsTXT.Text;
                     tps.setkode_kelurahan = kelurahan.ambilkodeDgnama(NakelCmb.Text);
                     if (tps.updatedata(kodtpsTxt.Text) > 0)
                     {
@@ -146,7 +149,8 @@ namespace SISUPEL.Views
             DataGridViewRow baris = this.TPSDgv.Rows[e.RowIndex];
             kodtpsTxt.Text = baris.Cells[0].Value.ToString();
             natpsTxt.Text = baris.Cells[1].Value.ToString();
-            NakelCmb.Text = baris.Cells[2].Value.ToString();
+            AlamatTpsTXT.Text = baris.Cells[2].Value.ToString();
+            NakelCmb.Text = baris.Cells[3].Value.ToString();
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)

@@ -15,6 +15,7 @@ namespace SISUPEL.Views
         public DashboardFrm()
         {
             InitializeComponent();
+
         }
 
         public void menuset(bool mn1, bool mn2,bool mn3,bool mn4)
@@ -62,6 +63,19 @@ namespace SISUPEL.Views
             panel1.Controls.Add(penduduk);
             penduduk.Dock = DockStyle.Fill;
             penduduk.Show();
+        }
+
+        public void admin()
+        {
+            PendudukFrm penduduk = new PendudukFrm();
+            penduduk.button(true);
+        }
+
+        public void user()
+        {
+            PendudukFrm penduduk = new PendudukFrm();
+            penduduk.button(false);
+           
         }
     }
 }

@@ -14,6 +14,7 @@ namespace SISUPEL.Models
         private string kode_tps;
         private string kode_kelurahan;
         private string nama_tps;
+        private string alamat_tps;
 
         LayananCls server;
         DataTable temp;
@@ -24,6 +25,7 @@ namespace SISUPEL.Models
             kode_tps = "";
             kode_kelurahan = "";
             nama_tps = "";
+            alamat_tps = "";
             server = new LayananCls();
             temp = new DataTable();
             Query = "";
@@ -53,9 +55,17 @@ namespace SISUPEL.Models
             }
         }
 
+        public string setalamat_tps
+        {
+            set
+            {
+                alamat_tps = value;
+            }
+        }
+
         public DataTable tampildata()
         {
-            Query = "SELECT a.kode_tps, a.nama_tps, b.nama_kelurahan FROM tps a, kelurahan b WHERE a.kode_kelurahan = b.kode_kelurahan";
+            Query = "SELECT a.kode_tps, a.nama_tps, a.alamat_tps, b.nama_kelurahan FROM tps a, kelurahan b WHERE a.kode_kelurahan = b.kode_kelurahan";
             return server.eksekusiQuery(Query);
         }
 
@@ -101,7 +111,7 @@ namespace SISUPEL.Models
         public int tambahdata()
         {
             int result = -1;
-            Query = "Insert INTO tps values('" + kode_tps + "','" + nama_tps + "','" + kode_kelurahan + "')";
+            Query = "Insert INTO tps values('" + kode_tps + "','" + nama_tps + "','" + alamat_tps + "','" +kode_kelurahan + "')";
 
             try
             {
@@ -118,7 +128,7 @@ namespace SISUPEL.Models
         public int updatedata(string kode)
         {
             int result = -1;
-            Query = "UPDATE tps SET nama_tps = '" + nama_tps + "' , kode_kelurahan = '" + kode_kelurahan + "'  WHERE kode_tps = '" + kode + "'";
+            Query = "UPDATE tps SET nama_tps = '" + nama_tps + "' , alamat_tps = '" + alamat_tps + "', kode_kelurahan = '" + kode_kelurahan + "'  WHERE kode_tps = '" + kode + "'";
 
             try
             {

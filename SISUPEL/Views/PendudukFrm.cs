@@ -19,6 +19,7 @@ namespace SISUPEL.Views
         PendudukCls penduduk = new PendudukCls();
         TPSCls tps = new TPSCls();
         kelurahanCls kelurahan = new kelurahanCls();
+       
 
         public PendudukFrm()
         {
@@ -235,9 +236,14 @@ namespace SISUPEL.Views
 
         private void CetakBtn_Click(object sender, EventArgs e)
         {
-            CetakpendudukFrm penduduk = new CetakpendudukFrm();
+            PrintFrm penduduk = new PrintFrm();
             penduduk.kode = KodpenTxt.Text;
             penduduk.ShowDialog();
+        }
+
+        public void button(bool q)
+        {
+            this.CetakBtn.Visible = q;
         }
     }
 }

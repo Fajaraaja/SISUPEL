@@ -28,14 +28,16 @@ namespace SISUPEL.Views
                 if (role == "admin")
                 {
                     DashboardFrm dashboard = new DashboardFrm();
-                    dashboard.menuset(true,true,true,true);
+                    dashboard.admin();
+                    dashboard.menuset(true, true, true, true);
                     dashboard.Show();
                     this.Hide();
                 }
                 else
                 {
                     DashboardFrm dashboard = new DashboardFrm();
-                    dashboard.menuset(false,false,true,true);
+                    dashboard.user();
+                    dashboard.menuset(false, false, true, true);
                     dashboard.Show();
                     this.Hide();
 

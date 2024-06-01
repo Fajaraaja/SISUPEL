@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PendudukFrm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CetakBtn = new System.Windows.Forms.Button();
             this.searchTxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NaTpsCmb = new System.Windows.Forms.ComboBox();
@@ -59,7 +60,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CetakBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -90,18 +90,32 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(845, 319);
+            this.panel2.Size = new System.Drawing.Size(845, 378);
             this.panel2.TabIndex = 42;
+            // 
+            // CetakBtn
+            // 
+            this.CetakBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.CetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CetakBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.CetakBtn.Location = new System.Drawing.Point(507, 262);
+            this.CetakBtn.Name = "CetakBtn";
+            this.CetakBtn.Size = new System.Drawing.Size(146, 41);
+            this.CetakBtn.TabIndex = 55;
+            this.CetakBtn.Text = "Cetak";
+            this.CetakBtn.UseVisualStyleBackColor = false;
+            this.CetakBtn.Click += new System.EventHandler(this.CetakBtn_Click);
             // 
             // searchTxt
             // 
             this.searchTxt.BackColor = System.Drawing.SystemColors.ControlLight;
             this.searchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.searchTxt.Font = new System.Drawing.Font("Poppins", 8.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTxt.Location = new System.Drawing.Point(519, 270);
+            this.searchTxt.Location = new System.Drawing.Point(88, 324);
             this.searchTxt.Multiline = true;
             this.searchTxt.Name = "searchTxt";
-            this.searchTxt.Size = new System.Drawing.Size(286, 30);
+            this.searchTxt.Size = new System.Drawing.Size(565, 30);
             this.searchTxt.TabIndex = 54;
             this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
             // 
@@ -109,7 +123,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(475, 270);
+            this.pictureBox1.Location = new System.Drawing.Point(44, 324);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +136,7 @@
             this.NaTpsCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NaTpsCmb.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NaTpsCmb.FormattingEnabled = true;
-            this.NaTpsCmb.Location = new System.Drawing.Point(340, 214);
+            this.NaTpsCmb.Location = new System.Drawing.Point(389, 214);
             this.NaTpsCmb.Name = "NaTpsCmb";
             this.NaTpsCmb.Size = new System.Drawing.Size(264, 31);
             this.NaTpsCmb.TabIndex = 52;
@@ -133,7 +147,7 @@
             this.NakelCmb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NakelCmb.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NakelCmb.FormattingEnabled = true;
-            this.NakelCmb.Location = new System.Drawing.Point(340, 135);
+            this.NakelCmb.Location = new System.Drawing.Point(389, 135);
             this.NakelCmb.Name = "NakelCmb";
             this.NakelCmb.Size = new System.Drawing.Size(264, 31);
             this.NakelCmb.TabIndex = 51;
@@ -145,7 +159,7 @@
             this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.CancelBtn.Location = new System.Drawing.Point(327, 262);
+            this.CancelBtn.Location = new System.Drawing.Point(358, 262);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(125, 41);
             this.CancelBtn.TabIndex = 50;
@@ -159,7 +173,7 @@
             this.hapusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hapusBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hapusBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.hapusBtn.Location = new System.Drawing.Point(192, 262);
+            this.hapusBtn.Location = new System.Drawing.Point(209, 262);
             this.hapusBtn.Name = "hapusBtn";
             this.hapusBtn.Size = new System.Drawing.Size(129, 41);
             this.hapusBtn.TabIndex = 49;
@@ -185,7 +199,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(335, 181);
+            this.label4.Location = new System.Drawing.Point(384, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 30);
             this.label4.TabIndex = 47;
@@ -195,7 +209,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(335, 102);
+            this.label5.Location = new System.Drawing.Point(384, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(99, 30);
             this.label5.TabIndex = 46;
@@ -206,7 +220,7 @@
             this.AlamatTxt.BackColor = System.Drawing.SystemColors.ControlLight;
             this.AlamatTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AlamatTxt.Font = new System.Drawing.Font("Poppins", 8.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AlamatTxt.Location = new System.Drawing.Point(340, 56);
+            this.AlamatTxt.Location = new System.Drawing.Point(389, 56);
             this.AlamatTxt.Multiline = true;
             this.AlamatTxt.Name = "AlamatTxt";
             this.AlamatTxt.Size = new System.Drawing.Size(264, 30);
@@ -216,7 +230,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(335, 23);
+            this.label6.Location = new System.Drawing.Point(384, 23);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 30);
             this.label6.TabIndex = 44;
@@ -334,9 +348,9 @@
             // 
             this.panel4.Controls.Add(this.PendudukDgv);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 319);
+            this.panel4.Location = new System.Drawing.Point(0, 378);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(845, 184);
+            this.panel4.Size = new System.Drawing.Size(845, 125);
             this.panel4.TabIndex = 44;
             // 
             // PendudukDgv
@@ -357,8 +371,8 @@
             this.PendudukDgv.ReadOnly = true;
             this.PendudukDgv.RowHeadersWidth = 51;
             this.PendudukDgv.RowTemplate.Height = 24;
-            this.PendudukDgv.Size = new System.Drawing.Size(845, 184);
-            this.PendudukDgv.TabIndex = 41;
+            this.PendudukDgv.Size = new System.Drawing.Size(845, 125);
+            this.PendudukDgv.TabIndex = 42;
             this.PendudukDgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PendudukDgv_CellClick);
             // 
             // Column1
@@ -415,20 +429,6 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 250;
             // 
-            // CetakBtn
-            // 
-            this.CetakBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.CetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CetakBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.CetakBtn.Location = new System.Drawing.Point(629, 203);
-            this.CetakBtn.Name = "CetakBtn";
-            this.CetakBtn.Size = new System.Drawing.Size(125, 41);
-            this.CetakBtn.TabIndex = 55;
-            this.CetakBtn.Text = "Cetak";
-            this.CetakBtn.UseVisualStyleBackColor = false;
-            this.CetakBtn.Click += new System.EventHandler(this.CetakBtn_Click);
-            // 
             // PendudukFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -478,6 +478,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button CetakBtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView PendudukDgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -486,6 +487,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.Button CetakBtn;
     }
 }

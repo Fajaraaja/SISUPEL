@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TPSFrm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AlamatTpsTXT = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.searchTxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,6 +52,7 @@
             this.TPSDgv = new System.Windows.Forms.DataGridView();
             this.kode_tps = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_tps = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Alamat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_kelurahan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +63,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.AlamatTpsTXT);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.searchTxt);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -77,6 +82,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(845, 267);
             this.panel1.TabIndex = 0;
+            // 
+            // AlamatTpsTXT
+            // 
+            this.AlamatTpsTXT.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.AlamatTpsTXT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AlamatTpsTXT.Font = new System.Drawing.Font("Poppins", 8.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AlamatTpsTXT.Location = new System.Drawing.Point(480, 111);
+            this.AlamatTpsTXT.Multiline = true;
+            this.AlamatTpsTXT.Name = "AlamatTpsTXT";
+            this.AlamatTpsTXT.Size = new System.Drawing.Size(322, 30);
+            this.AlamatTpsTXT.TabIndex = 79;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(376, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(98, 30);
+            this.label5.TabIndex = 78;
+            this.label5.Text = "Lokasi TPS";
             // 
             // label4
             // 
@@ -161,7 +187,7 @@
             this.NakelCmb.FormattingEnabled = true;
             this.NakelCmb.Location = new System.Drawing.Point(170, 110);
             this.NakelCmb.Name = "NakelCmb";
-            this.NakelCmb.Size = new System.Drawing.Size(409, 31);
+            this.NakelCmb.Size = new System.Drawing.Size(200, 31);
             this.NakelCmb.TabIndex = 71;
             // 
             // label3
@@ -170,9 +196,9 @@
             this.label3.Font = new System.Drawing.Font("Poppins", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(45, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 30);
+            this.label3.Size = new System.Drawing.Size(99, 30);
             this.label3.TabIndex = 70;
-            this.label3.Text = "Lokasi TPS";
+            this.label3.Text = "Kelurahan";
             // 
             // natpsTxt
             // 
@@ -182,7 +208,7 @@
             this.natpsTxt.Location = new System.Drawing.Point(170, 65);
             this.natpsTxt.Multiline = true;
             this.natpsTxt.Name = "natpsTxt";
-            this.natpsTxt.Size = new System.Drawing.Size(409, 30);
+            this.natpsTxt.Size = new System.Drawing.Size(315, 30);
             this.natpsTxt.TabIndex = 69;
             // 
             // label2
@@ -280,6 +306,7 @@
             this.TPSDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.kode_tps,
             this.nama_tps,
+            this.Alamat,
             this.nama_kelurahan});
             this.TPSDgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TPSDgv.Location = new System.Drawing.Point(0, 0);
@@ -309,6 +336,15 @@
             this.nama_tps.ReadOnly = true;
             this.nama_tps.Width = 500;
             // 
+            // Alamat
+            // 
+            this.Alamat.DataPropertyName = "alamat_tps";
+            this.Alamat.HeaderText = "Lokasi TPS";
+            this.Alamat.MinimumWidth = 6;
+            this.Alamat.Name = "Alamat";
+            this.Alamat.ReadOnly = true;
+            this.Alamat.Width = 325;
+            // 
             // nama_kelurahan
             // 
             this.nama_kelurahan.DataPropertyName = "nama_kelurahan";
@@ -316,7 +352,7 @@
             this.nama_kelurahan.MinimumWidth = 6;
             this.nama_kelurahan.Name = "nama_kelurahan";
             this.nama_kelurahan.ReadOnly = true;
-            this.nama_kelurahan.Width = 550;
+            this.nama_kelurahan.Width = 350;
             // 
             // TPSFrm
             // 
@@ -366,8 +402,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView TPSDgv;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox AlamatTpsTXT;
         private System.Windows.Forms.DataGridViewTextBoxColumn kode_tps;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_tps;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Alamat;
         private System.Windows.Forms.DataGridViewTextBoxColumn nama_kelurahan;
     }
 }

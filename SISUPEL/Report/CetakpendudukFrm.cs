@@ -30,7 +30,7 @@ namespace SISUPEL.Report
         private void CetakpendudukFrm_Load(object sender, EventArgs e)
         {
             ReportDocument Rep = new ReportDocument();
-            Rep.Load(@"D:\Kuliah\PBO 2\SISUPEL2\SISUPEL\Report\PendudukCrp.rpt");
+            Rep.Load(@"D:\Kuliah\PBO 2\SISUPEL2\SISUPEL\Report\CrystalReport1.rpt");
             Rep.SetDatabaseLogon("root", "");
 
             ParameterFieldDefinitions pars;
