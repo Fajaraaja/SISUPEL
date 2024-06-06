@@ -62,12 +62,6 @@
     <Compile Include="Models\LoginCls.cs" />
     <Compile Include="Models\PendudukCls.cs" />
     <Compile Include="Models\TPSCls.cs" />
-    <Compile Include="Report\CetakpendudukFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Report\CetakpendudukFrm.Designer.cs">
-      <DependentUpon>CetakpendudukFrm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Report\CrystalReport1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,9 +122,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Report\CetakpendudukFrm.resx">
-      <DependentUpon>CetakpendudukFrm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\CrystalReport1.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReport1.cs</LastGenOutput>

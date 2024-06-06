@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SISUPEL.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,11 @@ namespace SISUPEL.Views
 {
     public partial class DashboardFrm : Form
     {
-        public DashboardFrm()
+        string userrole;
+        public DashboardFrm(string role)
         {
             InitializeComponent();
-
+            userrole = role;
         }
 
         public void menuset(bool mn1, bool mn2,bool mn3,bool mn4)
@@ -62,20 +64,11 @@ namespace SISUPEL.Views
             penduduk.TopLevel = false;
             panel1.Controls.Add(penduduk);
             penduduk.Dock = DockStyle.Fill;
+            if(userrole != "admin")
+            {
+                penduduk.Isvisible();
+            }
             penduduk.Show();
-        }
-
-        public void admin()
-        {
-            PendudukFrm penduduk = new PendudukFrm();
-            penduduk.button(true);
-        }
-
-        public void user()
-        {
-            PendudukFrm penduduk = new PendudukFrm();
-            penduduk.button(false);
-           
         }
     }
 }

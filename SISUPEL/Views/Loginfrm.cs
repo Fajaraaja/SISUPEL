@@ -21,28 +21,28 @@ namespace SISUPEL.Views
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            if (login.ApakahAda(UserTxt.Text, PassTxt.Text))
+            if (string.IsNullOrEmpty(UserTxt.Text) || string.IsNullOrEmpty(PassTxt.Text))
+            {
+                MessageBox.Show("Username atau password tidak boleh kosong.",
+                    "KESALAHAN", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UserTxt.Focus();
+            }
+            else if (login.ApakahAda(UserTxt.Text, PassTxt.Text))
             {
                 string role = login.GetRole(UserTxt.Text);
-
+                DashboardFrm dashboard = new DashboardFrm(role);
                 if (role == "admin")
                 {
-                    DashboardFrm dashboard = new DashboardFrm();
-                    dashboard.admin();
                     dashboard.menuset(true, true, true, true);
                     dashboard.Show();
                     this.Hide();
                 }
                 else
                 {
-                    DashboardFrm dashboard = new DashboardFrm();
-                    dashboard.user();
                     dashboard.menuset(false, false, true, true);
                     dashboard.Show();
                     this.Hide();
-
                 }
-               
             }
             else
             {
@@ -51,6 +51,7 @@ namespace SISUPEL.Views
                 UserTxt.SelectAll();
                 UserTxt.Focus();
             }
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

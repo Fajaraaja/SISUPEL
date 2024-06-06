@@ -15,11 +15,11 @@ namespace SISUPEL.Views
 {
     public partial class PendudukFrm : Form
     {
-
+        string role;
         PendudukCls penduduk = new PendudukCls();
         TPSCls tps = new TPSCls();
         kelurahanCls kelurahan = new kelurahanCls();
-       
+        LoginCls login = new LoginCls();
 
         public PendudukFrm()
         {
@@ -241,9 +241,9 @@ namespace SISUPEL.Views
             penduduk.ShowDialog();
         }
 
-        public void button(bool q)
+        public void Isvisible()
         {
-            this.CetakBtn.Visible = q;
+            CetakBtn.Visible = false;
         }
     }
 }
