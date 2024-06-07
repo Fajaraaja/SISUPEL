@@ -14,6 +14,7 @@ namespace SISUPEL.Views
     public partial class DashboardFrm : Form
     {
         string userrole;
+        string username;
         public DashboardFrm(string role)
         {
             InitializeComponent();
@@ -26,7 +27,6 @@ namespace SISUPEL.Views
             TPSToolStripMenuItem.Visible = mn2;
             PendudukToolStripMenuItem.Visible = mn3;
             logOutToolStripMenuItem.Visible = mn4;
-
         }
 
         private void KelurahanToolStripMenuItem_Click(object sender, EventArgs e)

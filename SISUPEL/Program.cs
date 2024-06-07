@@ -17,7 +17,7 @@ namespace SISUPEL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loginfrm()); ;
+            Application.Run(new Splashscreenfrm()); ;
         }
     }
 }

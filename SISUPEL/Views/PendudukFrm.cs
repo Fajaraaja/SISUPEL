@@ -15,11 +15,9 @@ namespace SISUPEL.Views
 {
     public partial class PendudukFrm : Form
     {
-        string role;
         PendudukCls penduduk = new PendudukCls();
         TPSCls tps = new TPSCls();
         kelurahanCls kelurahan = new kelurahanCls();
-        LoginCls login = new LoginCls();
 
         public PendudukFrm()
         {
@@ -116,53 +114,62 @@ namespace SISUPEL.Views
                 penduduk.setkode_kelurahan = kelurahan.ambilkodeDgnama(NakelCmb.Text);
                 penduduk.setkode_tps = tps.ambilkodeDgnama(NaTpsCmb.Text);
 
-                try
+                if (NikTxt.Text.Length != 16)
                 {
-                    string kod = NikTxt.Text.Substring(10, 2);
-                    int tahunSekarang = DateTime.Now.Year;
-                    string tahus = tahunSekarang.ToString().Substring(2,2);
-                    int tahuns = int.Parse(tahus);
-                    int kodInt = int.Parse(kod);
+                    MessageBox.Show("Panjang NIK harus 16 karakter", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clear();
+                    tampilgrid();
+                }
+                else
+                {
+                    try
+                    {
+                        string kod = NikTxt.Text.Substring(10, 2);
+                        int tahunSekarang = DateTime.Now.Year;
+                        string tahus = tahunSekarang.ToString().Substring(2, 2);
+                        int tahuns = int.Parse(tahus);
+                        int kodInt = int.Parse(kod);
 
-                    if (kodInt <= tahuns)
-                    {
-                        kodInt += 2000;
-                    }
-                    else
-                    {
-                        kodInt += 1900;
-                    }
-
-                    int tahunLahir = kodInt;
-                    int umur = tahunSekarang - tahunLahir;
-
-                    // Validasi umur
-                    if (umur < 17)
-                    {
-                        MessageBox.Show("Pencoblos Belum Cukup Umur", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clear();
-                        tampilgrid();
-                    }
-                    else
-                    {
-                        // Simpan data penduduk
-                        if (penduduk.savedata() > 0)
+                        if (kodInt <= tahuns)
                         {
-                            MessageBox.Show("Data Berhasil Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            kodInt += 2000;
+                        }
+                        else
+                        {
+                            kodInt += 1900;
+                        }
+
+                        int tahunLahir = kodInt;
+                        int umur = tahunSekarang - tahunLahir;
+
+                        // Validasi umur
+                        if (umur < 17)
+                        {
+                            MessageBox.Show("Pencoblos Belum Cukup Umur", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             clear();
                             tampilgrid();
                         }
                         else
                         {
-                            MessageBox.Show("Data Gagal Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            clear();
-                            tampilgrid();
+                            // Simpan data penduduk
+                            if (penduduk.savedata() > 0)
+                            {
+                                MessageBox.Show("Data Berhasil Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                clear();
+                                tampilgrid();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data Gagal Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                clear();
+                                tampilgrid();
+                            }
                         }
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message, "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message, "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             else
@@ -178,17 +185,62 @@ namespace SISUPEL.Views
                     penduduk.setkode_tps = tps.ambilkodeDgnama(NaTpsCmb.Text);
 
                     // Perbarui data penduduk
-                    if (penduduk.updatedata(KodpenTxt.Text) > 0)
+                    if (NikTxt.Text.Length != 16)
                     {
-                        MessageBox.Show("Data Berhasil Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Panjang NIK harus 16 karakter", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         clear();
                         tampilgrid();
                     }
                     else
                     {
-                        MessageBox.Show("Data Gagal Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        clear();
-                        tampilgrid();
+                        try
+                        {
+                            string kod = NikTxt.Text.Substring(10, 2);
+                            int tahunSekarang = DateTime.Now.Year;
+                            string tahus = tahunSekarang.ToString().Substring(2, 2);
+                            int tahuns = int.Parse(tahus);
+                            int kodInt = int.Parse(kod);
+
+                            if (kodInt <= tahuns)
+                            {
+                                kodInt += 2000;
+                            }
+                            else
+                            {
+                                kodInt += 1900;
+                            }
+
+                            int tahunLahir = kodInt;
+                            int umur = tahunSekarang - tahunLahir;
+
+                            // Validasi umur
+                            if (umur < 17)
+                            {
+                                MessageBox.Show("Pencoblos Belum Cukup Umur", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                clear();
+                                tampilgrid();
+                            }
+                            else
+                            {
+                                // Simpan data penduduk
+                                if (penduduk.updatedata(KodpenTxt.Text) > 0)
+                                {
+                                    MessageBox.Show("Data Berhasil Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    clear();
+                                    tampilgrid();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Data Gagal Disimpan", "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    clear();
+                                    tampilgrid();
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message, "INFORMASI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }

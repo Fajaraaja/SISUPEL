@@ -8,6 +8,8 @@ using System.Data;
 namespace SISUPEL.Models
 {
     using Config;
+    using System.Collections;
+
     internal class PendudukCls
     {
         private string kode_penduduk;
@@ -83,8 +85,8 @@ namespace SISUPEL.Models
 
         public DataTable getallpenduduk()
         {
-            Query = "SELECT p.kode_penduduk, p.nama_penduduk, p.nik, p.alamat_penduduk,k.nama_kelurahan, t.nama_tps FROM penduduk p " +
-                    "JOIN kelurahan k ON p.kode_kelurahan = k.kode_kelurahan JOIN tps t ON p.kode_tps = t.kode_tps";
+            Query =  "SELECT p.kode_penduduk, p.nama_penduduk, p.nik, p.alamat_penduduk,k.nama_kelurahan, t.nama_tps FROM penduduk p " +
+                     "JOIN kelurahan k ON p.kode_kelurahan = k.kode_kelurahan JOIN tps t ON p.kode_tps = t.kode_tps";
 
             return server.eksekusiQuery(Query);
         }
