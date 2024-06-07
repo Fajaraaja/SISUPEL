@@ -143,8 +143,11 @@
             this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.CancelBtn.Image = global::SISUPEL.Properties.Resources.Close;
+            this.CancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CancelBtn.Location = new System.Drawing.Point(319, 156);
             this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.CancelBtn.Size = new System.Drawing.Size(125, 41);
             this.CancelBtn.TabIndex = 74;
             this.CancelBtn.Text = "Batal";
@@ -157,8 +160,11 @@
             this.hapusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hapusBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hapusBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.hapusBtn.Image = global::SISUPEL.Properties.Resources.Trash;
+            this.hapusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.hapusBtn.Location = new System.Drawing.Point(450, 156);
             this.hapusBtn.Name = "hapusBtn";
+            this.hapusBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.hapusBtn.Size = new System.Drawing.Size(129, 41);
             this.hapusBtn.TabIndex = 73;
             this.hapusBtn.Text = "Hapus";
@@ -171,8 +177,11 @@
             this.simpanBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.simpanBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpanBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.simpanBtn.Image = global::SISUPEL.Properties.Resources.Save;
+            this.simpanBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.simpanBtn.Location = new System.Drawing.Point(170, 156);
             this.simpanBtn.Name = "simpanBtn";
+            this.simpanBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.simpanBtn.Size = new System.Drawing.Size(143, 41);
             this.simpanBtn.TabIndex = 72;
             this.simpanBtn.Text = "Simpan";

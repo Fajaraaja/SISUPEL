@@ -30,14 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PendudukFrm));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.CetakBtn = new System.Windows.Forms.Button();
             this.searchTxt = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NaTpsCmb = new System.Windows.Forms.ComboBox();
             this.NakelCmb = new System.Windows.Forms.ComboBox();
-            this.CancelBtn = new System.Windows.Forms.Button();
-            this.hapusBtn = new System.Windows.Forms.Button();
-            this.simpanBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.AlamatTxt = new System.Windows.Forms.TextBox();
@@ -60,11 +55,16 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CetakBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CancelBtn = new System.Windows.Forms.Button();
+            this.hapusBtn = new System.Windows.Forms.Button();
+            this.simpanBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PendudukDgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -93,20 +93,6 @@
             this.panel2.Size = new System.Drawing.Size(845, 378);
             this.panel2.TabIndex = 42;
             // 
-            // CetakBtn
-            // 
-            this.CetakBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.CetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CetakBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.CetakBtn.Location = new System.Drawing.Point(507, 262);
-            this.CetakBtn.Name = "CetakBtn";
-            this.CetakBtn.Size = new System.Drawing.Size(146, 41);
-            this.CetakBtn.TabIndex = 55;
-            this.CetakBtn.Text = "Cetak";
-            this.CetakBtn.UseVisualStyleBackColor = false;
-            this.CetakBtn.Click += new System.EventHandler(this.CetakBtn_Click);
-            // 
             // searchTxt
             // 
             this.searchTxt.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -118,17 +104,6 @@
             this.searchTxt.Size = new System.Drawing.Size(565, 30);
             this.searchTxt.TabIndex = 54;
             this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 324);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
             // 
             // NaTpsCmb
             // 
@@ -152,48 +127,6 @@
             this.NakelCmb.Size = new System.Drawing.Size(264, 31);
             this.NakelCmb.TabIndex = 51;
             this.NakelCmb.SelectedIndexChanged += new System.EventHandler(this.NakelCmb_SelectedIndexChanged);
-            // 
-            // CancelBtn
-            // 
-            this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.CancelBtn.Location = new System.Drawing.Point(358, 262);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(125, 41);
-            this.CancelBtn.TabIndex = 50;
-            this.CancelBtn.Text = "Batal";
-            this.CancelBtn.UseVisualStyleBackColor = false;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
-            // 
-            // hapusBtn
-            // 
-            this.hapusBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.hapusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hapusBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hapusBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.hapusBtn.Location = new System.Drawing.Point(209, 262);
-            this.hapusBtn.Name = "hapusBtn";
-            this.hapusBtn.Size = new System.Drawing.Size(129, 41);
-            this.hapusBtn.TabIndex = 49;
-            this.hapusBtn.Text = "Hapus";
-            this.hapusBtn.UseVisualStyleBackColor = false;
-            this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
-            // 
-            // simpanBtn
-            // 
-            this.simpanBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
-            this.simpanBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.simpanBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpanBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.simpanBtn.Location = new System.Drawing.Point(43, 262);
-            this.simpanBtn.Name = "simpanBtn";
-            this.simpanBtn.Size = new System.Drawing.Size(143, 41);
-            this.simpanBtn.TabIndex = 48;
-            this.simpanBtn.Text = "Simpan";
-            this.simpanBtn.UseVisualStyleBackColor = false;
-            this.simpanBtn.Click += new System.EventHandler(this.simpanBtn_Click);
             // 
             // label4
             // 
@@ -429,6 +362,85 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 250;
             // 
+            // CetakBtn
+            // 
+            this.CetakBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.CetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CetakBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.CetakBtn.Image = global::SISUPEL.Properties.Resources.Print;
+            this.CetakBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CetakBtn.Location = new System.Drawing.Point(507, 262);
+            this.CetakBtn.Name = "CetakBtn";
+            this.CetakBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.CetakBtn.Size = new System.Drawing.Size(146, 41);
+            this.CetakBtn.TabIndex = 55;
+            this.CetakBtn.Text = "Cetak";
+            this.CetakBtn.UseVisualStyleBackColor = false;
+            this.CetakBtn.Click += new System.EventHandler(this.CetakBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 324);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            // 
+            // CancelBtn
+            // 
+            this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.CancelBtn.Image = global::SISUPEL.Properties.Resources.Close;
+            this.CancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CancelBtn.Location = new System.Drawing.Point(358, 262);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.CancelBtn.Size = new System.Drawing.Size(125, 41);
+            this.CancelBtn.TabIndex = 50;
+            this.CancelBtn.Text = "Batal";
+            this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            // 
+            // hapusBtn
+            // 
+            this.hapusBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.hapusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hapusBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hapusBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.hapusBtn.Image = global::SISUPEL.Properties.Resources.Trash;
+            this.hapusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.hapusBtn.Location = new System.Drawing.Point(209, 262);
+            this.hapusBtn.Name = "hapusBtn";
+            this.hapusBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.hapusBtn.Size = new System.Drawing.Size(129, 41);
+            this.hapusBtn.TabIndex = 49;
+            this.hapusBtn.Text = "Hapus";
+            this.hapusBtn.UseVisualStyleBackColor = false;
+            this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
+            // 
+            // simpanBtn
+            // 
+            this.simpanBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.simpanBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.simpanBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpanBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.simpanBtn.Image = global::SISUPEL.Properties.Resources.Save;
+            this.simpanBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.simpanBtn.Location = new System.Drawing.Point(43, 262);
+            this.simpanBtn.Name = "simpanBtn";
+            this.simpanBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.simpanBtn.Size = new System.Drawing.Size(143, 41);
+            this.simpanBtn.TabIndex = 48;
+            this.simpanBtn.Text = "Simpan";
+            this.simpanBtn.UseVisualStyleBackColor = false;
+            this.simpanBtn.Click += new System.EventHandler(this.simpanBtn_Click);
+            // 
             // PendudukFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -446,11 +458,11 @@
             this.Load += new System.EventHandler(this.PendudukFrm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PendudukDgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
