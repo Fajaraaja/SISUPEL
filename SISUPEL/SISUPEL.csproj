@@ -117,6 +117,12 @@
     <Compile Include="Views\TPSFrm.Designer.cs">
       <DependentUpon>TPSFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\WelcomeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\WelcomeFrm.Designer.cs">
+      <DependentUpon>WelcomeFrm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TPSFrm.resx">
       <DependentUpon>TPSFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\WelcomeFrm.resx">
+      <DependentUpon>WelcomeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -183,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\159287.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Putih Merah Modern Kampanye Hak Pilih Pemilu Spanduk.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,7 +14,7 @@ namespace SISUPEL.Views
     public partial class DashboardFrm : Form
     {
         string userrole;
-        string username;
+        
         public DashboardFrm(string role)
         {
             InitializeComponent();
@@ -41,9 +41,23 @@ namespace SISUPEL.Views
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Loginfrm login= new Loginfrm();
-            login.Show();
-            Close();
+            // Tampilkan kotak dialog konfirmasi
+            DialogResult result = MessageBox.Show(
+                "Apakah Anda yakin ingin keluar?",
+                "Konfirmasi Log Out",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                // Tampilkan form login
+                Loginfrm login = new Loginfrm();
+                login.Show();
+
+                // Tutup form saat ini (misalnya, form utama)
+                this.Close();
+            }
         }
 
         private void TPSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -69,6 +83,16 @@ namespace SISUPEL.Views
                 penduduk.Isvisible();
             }
             penduduk.Show();
+        }
+
+        private void DashboardFrm_Load(object sender, EventArgs e)
+        {
+            WelcomeFrm welcome = new WelcomeFrm();
+            panel1.Controls.Clear();
+            welcome.TopLevel = false;
+            panel1.Controls.Add(welcome);
+            welcome.Dock = DockStyle.Fill;
+            welcome.Show();
         }
     }
 }

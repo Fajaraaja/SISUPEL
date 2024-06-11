@@ -147,10 +147,10 @@
             this.CancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CancelBtn.Location = new System.Drawing.Point(319, 156);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.CancelBtn.Size = new System.Drawing.Size(125, 41);
             this.CancelBtn.TabIndex = 74;
             this.CancelBtn.Text = "Batal";
+            this.CancelBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CancelBtn.UseVisualStyleBackColor = false;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
             // 
@@ -164,10 +164,10 @@
             this.hapusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.hapusBtn.Location = new System.Drawing.Point(450, 156);
             this.hapusBtn.Name = "hapusBtn";
-            this.hapusBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.hapusBtn.Size = new System.Drawing.Size(129, 41);
             this.hapusBtn.TabIndex = 73;
             this.hapusBtn.Text = "Hapus";
+            this.hapusBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.hapusBtn.UseVisualStyleBackColor = false;
             this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
             // 
@@ -181,10 +181,10 @@
             this.simpanBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.simpanBtn.Location = new System.Drawing.Point(170, 156);
             this.simpanBtn.Name = "simpanBtn";
-            this.simpanBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.simpanBtn.Size = new System.Drawing.Size(143, 41);
             this.simpanBtn.TabIndex = 72;
             this.simpanBtn.Text = "Simpan";
+            this.simpanBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.simpanBtn.UseVisualStyleBackColor = false;
             this.simpanBtn.Click += new System.EventHandler(this.simpanBtn_Click);
             // 
@@ -309,7 +309,7 @@
             // 
             this.TPSDgv.AllowUserToAddRows = false;
             this.TPSDgv.AllowUserToDeleteRows = false;
-            this.TPSDgv.BackgroundColor = System.Drawing.Color.LightGray;
+            this.TPSDgv.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.TPSDgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TPSDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TPSDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -334,7 +334,7 @@
             this.kode_tps.MinimumWidth = 6;
             this.kode_tps.Name = "kode_tps";
             this.kode_tps.ReadOnly = true;
-            this.kode_tps.Width = 300;
+            this.kode_tps.Width = 180;
             // 
             // nama_tps
             // 

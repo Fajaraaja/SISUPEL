@@ -30,9 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PendudukFrm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CetakBtn = new System.Windows.Forms.Button();
             this.searchTxt = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NaTpsCmb = new System.Windows.Forms.ComboBox();
             this.NakelCmb = new System.Windows.Forms.ComboBox();
+            this.CancelBtn = new System.Windows.Forms.Button();
+            this.hapusBtn = new System.Windows.Forms.Button();
+            this.simpanBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.AlamatTxt = new System.Windows.Forms.TextBox();
@@ -43,10 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.KodpenTxt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.PendudukDgv = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,16 +56,15 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CetakBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.CancelBtn = new System.Windows.Forms.Button();
-            this.hapusBtn = new System.Windows.Forms.Button();
-            this.simpanBtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PendudukDgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -90,8 +90,25 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(845, 378);
+            this.panel2.Size = new System.Drawing.Size(845, 379);
             this.panel2.TabIndex = 42;
+            // 
+            // CetakBtn
+            // 
+            this.CetakBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.CetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CetakBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.CetakBtn.Image = global::SISUPEL.Properties.Resources.Print;
+            this.CetakBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CetakBtn.Location = new System.Drawing.Point(507, 262);
+            this.CetakBtn.Name = "CetakBtn";
+            this.CetakBtn.Size = new System.Drawing.Size(146, 41);
+            this.CetakBtn.TabIndex = 55;
+            this.CetakBtn.Text = "Cetak";
+            this.CetakBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CetakBtn.UseVisualStyleBackColor = false;
+            this.CetakBtn.Click += new System.EventHandler(this.CetakBtn_Click);
             // 
             // searchTxt
             // 
@@ -104,6 +121,17 @@
             this.searchTxt.Size = new System.Drawing.Size(565, 30);
             this.searchTxt.TabIndex = 54;
             this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 324);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
             // 
             // NaTpsCmb
             // 
@@ -127,6 +155,57 @@
             this.NakelCmb.Size = new System.Drawing.Size(264, 31);
             this.NakelCmb.TabIndex = 51;
             this.NakelCmb.SelectedIndexChanged += new System.EventHandler(this.NakelCmb_SelectedIndexChanged);
+            // 
+            // CancelBtn
+            // 
+            this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CancelBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.CancelBtn.Image = global::SISUPEL.Properties.Resources.Close;
+            this.CancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CancelBtn.Location = new System.Drawing.Point(358, 262);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(125, 41);
+            this.CancelBtn.TabIndex = 50;
+            this.CancelBtn.Text = "Batal";
+            this.CancelBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            // 
+            // hapusBtn
+            // 
+            this.hapusBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.hapusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hapusBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hapusBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.hapusBtn.Image = global::SISUPEL.Properties.Resources.Trash;
+            this.hapusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.hapusBtn.Location = new System.Drawing.Point(209, 262);
+            this.hapusBtn.Name = "hapusBtn";
+            this.hapusBtn.Size = new System.Drawing.Size(129, 41);
+            this.hapusBtn.TabIndex = 49;
+            this.hapusBtn.Text = "Hapus";
+            this.hapusBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.hapusBtn.UseVisualStyleBackColor = false;
+            this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
+            // 
+            // simpanBtn
+            // 
+            this.simpanBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
+            this.simpanBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.simpanBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpanBtn.ForeColor = System.Drawing.SystemColors.Window;
+            this.simpanBtn.Image = global::SISUPEL.Properties.Resources.Save;
+            this.simpanBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.simpanBtn.Location = new System.Drawing.Point(43, 262);
+            this.simpanBtn.Name = "simpanBtn";
+            this.simpanBtn.Size = new System.Drawing.Size(143, 41);
+            this.simpanBtn.TabIndex = 48;
+            this.simpanBtn.Text = "Simpan";
+            this.simpanBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.simpanBtn.UseVisualStyleBackColor = false;
+            this.simpanBtn.Click += new System.EventHandler(this.simpanBtn_Click);
             // 
             // label4
             // 
@@ -179,6 +258,7 @@
             this.NikTxt.Name = "NikTxt";
             this.NikTxt.Size = new System.Drawing.Size(264, 30);
             this.NikTxt.TabIndex = 43;
+            this.NikTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NikTxt_KeyPress);
             // 
             // label3
             // 
@@ -233,55 +313,11 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "Kode Penduduk";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 503);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(845, 43);
-            this.panel1.TabIndex = 43;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(44, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(761, 1);
-            this.panel3.TabIndex = 44;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(625, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(164, 23);
-            this.label8.TabIndex = 43;
-            this.label8.Text = "Komisi Pemilihan Umum";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(40, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 23);
-            this.label9.TabIndex = 42;
-            this.label9.Text = "Hak Cipta © 2022 ";
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.PendudukDgv);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 378);
+            this.panel4.Location = new System.Drawing.Point(0, 379);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(845, 125);
             this.panel4.TabIndex = 44;
@@ -290,6 +326,7 @@
             // 
             this.PendudukDgv.AllowUserToAddRows = false;
             this.PendudukDgv.AllowUserToDeleteRows = false;
+            this.PendudukDgv.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.PendudukDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PendudukDgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -324,7 +361,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 250;
+            this.Column2.Width = 300;
             // 
             // Column3
             // 
@@ -362,84 +399,47 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 250;
             // 
-            // CetakBtn
+            // panel1
             // 
-            this.CetakBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.CetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CetakBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.CetakBtn.Image = global::SISUPEL.Properties.Resources.Print;
-            this.CetakBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CetakBtn.Location = new System.Drawing.Point(507, 262);
-            this.CetakBtn.Name = "CetakBtn";
-            this.CetakBtn.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.CetakBtn.Size = new System.Drawing.Size(146, 41);
-            this.CetakBtn.TabIndex = 55;
-            this.CetakBtn.Text = "Cetak";
-            this.CetakBtn.UseVisualStyleBackColor = false;
-            this.CetakBtn.Click += new System.EventHandler(this.CetakBtn_Click);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 504);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(845, 42);
+            this.panel1.TabIndex = 45;
             // 
-            // pictureBox1
+            // panel3
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 324);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 53;
-            this.pictureBox1.TabStop = false;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(34, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(781, 1);
+            this.panel3.TabIndex = 19;
             // 
-            // CancelBtn
+            // label7
             // 
-            this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CancelBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.CancelBtn.Image = global::SISUPEL.Properties.Resources.Close;
-            this.CancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.CancelBtn.Location = new System.Drawing.Point(358, 262);
-            this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.CancelBtn.Size = new System.Drawing.Size(125, 41);
-            this.CancelBtn.TabIndex = 50;
-            this.CancelBtn.Text = "Batal";
-            this.CancelBtn.UseVisualStyleBackColor = false;
-            this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(633, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(164, 23);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Komisi Pemilihan Umum";
             // 
-            // hapusBtn
+            // label8
             // 
-            this.hapusBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.hapusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hapusBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hapusBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.hapusBtn.Image = global::SISUPEL.Properties.Resources.Trash;
-            this.hapusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.hapusBtn.Location = new System.Drawing.Point(209, 262);
-            this.hapusBtn.Name = "hapusBtn";
-            this.hapusBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.hapusBtn.Size = new System.Drawing.Size(129, 41);
-            this.hapusBtn.TabIndex = 49;
-            this.hapusBtn.Text = "Hapus";
-            this.hapusBtn.UseVisualStyleBackColor = false;
-            this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
-            // 
-            // simpanBtn
-            // 
-            this.simpanBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
-            this.simpanBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.simpanBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpanBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.simpanBtn.Image = global::SISUPEL.Properties.Resources.Save;
-            this.simpanBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.simpanBtn.Location = new System.Drawing.Point(43, 262);
-            this.simpanBtn.Name = "simpanBtn";
-            this.simpanBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.simpanBtn.Size = new System.Drawing.Size(143, 41);
-            this.simpanBtn.TabIndex = 48;
-            this.simpanBtn.Text = "Simpan";
-            this.simpanBtn.UseVisualStyleBackColor = false;
-            this.simpanBtn.Click += new System.EventHandler(this.simpanBtn_Click);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Poppins Light", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(30, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 23);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Hak Cipta © 2022 ";
             // 
             // PendudukFrm
             // 
@@ -458,11 +458,11 @@
             this.Load += new System.EventHandler(this.PendudukFrm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PendudukDgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -486,10 +486,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox KodpenTxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button CetakBtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView PendudukDgv;
@@ -499,5 +495,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

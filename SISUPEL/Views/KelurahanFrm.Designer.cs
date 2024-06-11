@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KelurahanFrm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.searchTxt = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CancelBtn = new System.Windows.Forms.Button();
+            this.hapusBtn = new System.Windows.Forms.Button();
             this.nakelTxt = new System.Windows.Forms.TextBox();
             this.simpanBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,13 +49,11 @@
             this.kelurahanDgv = new System.Windows.Forms.DataGridView();
             this.kode_kelurahan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nama_kelurahan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.hapusBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kelurahanDgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -97,6 +97,17 @@
             this.searchTxt.Click += new System.EventHandler(this.searchTxt_TextChanged);
             this.searchTxt.TextChanged += new System.EventHandler(this.searchTxt_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(200, 191);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
+            // 
             // CancelBtn
             // 
             this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -107,12 +118,29 @@
             this.CancelBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CancelBtn.Location = new System.Drawing.Point(349, 123);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.CancelBtn.Size = new System.Drawing.Size(125, 41);
             this.CancelBtn.TabIndex = 26;
             this.CancelBtn.Text = "Batal";
+            this.CancelBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CancelBtn.UseVisualStyleBackColor = false;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            // 
+            // hapusBtn
+            // 
+            this.hapusBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.hapusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hapusBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hapusBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.hapusBtn.Image = global::SISUPEL.Properties.Resources.Trash;
+            this.hapusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.hapusBtn.Location = new System.Drawing.Point(480, 123);
+            this.hapusBtn.Name = "hapusBtn";
+            this.hapusBtn.Size = new System.Drawing.Size(129, 41);
+            this.hapusBtn.TabIndex = 25;
+            this.hapusBtn.Text = "Hapus";
+            this.hapusBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.hapusBtn.UseVisualStyleBackColor = false;
+            this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
             // 
             // nakelTxt
             // 
@@ -135,10 +163,10 @@
             this.simpanBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.simpanBtn.Location = new System.Drawing.Point(200, 123);
             this.simpanBtn.Name = "simpanBtn";
-            this.simpanBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.simpanBtn.Size = new System.Drawing.Size(143, 41);
             this.simpanBtn.TabIndex = 23;
             this.simpanBtn.Text = "Simpan";
+            this.simpanBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.simpanBtn.UseVisualStyleBackColor = false;
             this.simpanBtn.Click += new System.EventHandler(this.simpanBtn_Click);
             // 
@@ -257,41 +285,13 @@
             // nama_kelurahan
             // 
             this.nama_kelurahan.DataPropertyName = "nama_kelurahan";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nama_kelurahan.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nama_kelurahan.DefaultCellStyle = dataGridViewCellStyle1;
             this.nama_kelurahan.HeaderText = "Nama Kelurahan";
             this.nama_kelurahan.MinimumWidth = 6;
             this.nama_kelurahan.Name = "nama_kelurahan";
             this.nama_kelurahan.ReadOnly = true;
             this.nama_kelurahan.Width = 900;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(200, 191);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
-            // hapusBtn
-            // 
-            this.hapusBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.hapusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hapusBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hapusBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.hapusBtn.Image = global::SISUPEL.Properties.Resources.Trash;
-            this.hapusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.hapusBtn.Location = new System.Drawing.Point(480, 123);
-            this.hapusBtn.Name = "hapusBtn";
-            this.hapusBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.hapusBtn.Size = new System.Drawing.Size(129, 41);
-            this.hapusBtn.TabIndex = 25;
-            this.hapusBtn.Text = "Hapus";
-            this.hapusBtn.UseVisualStyleBackColor = false;
-            this.hapusBtn.Click += new System.EventHandler(this.hapusBtn_Click);
             // 
             // KelurahanFrm
             // 
@@ -309,11 +309,11 @@
             this.Load += new System.EventHandler(this.KelurahanFrm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kelurahanDgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
