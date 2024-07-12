@@ -83,6 +83,16 @@ namespace SISUPEL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_seamless_pattern_vector_with_cute_fluffy_cloud {
+            get {
+                object obj = ResourceManager.GetObject("background-seamless-pattern-vector-with-cute-fluffy-cloud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close {
             get {
                 object obj = ResourceManager.GetObject("Close", resourceCulture);

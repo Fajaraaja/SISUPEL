@@ -51,11 +51,8 @@ namespace SISUPEL.Views
 
             if (result == DialogResult.Yes)
             {
-                // Tampilkan form login
                 Loginfrm login = new Loginfrm();
                 login.Show();
-
-                // Tutup form saat ini (misalnya, form utama)
                 this.Close();
             }
         }
