@@ -34,7 +34,8 @@
             this.KelurahanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TPSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PendudukToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PersuratanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,8 @@
             this.KelurahanToolStripMenuItem,
             this.TPSToolStripMenuItem,
             this.PendudukToolStripMenuItem,
-            this.logOutToolStripMenuItem});
+            this.PersuratanToolStripMenuItem,
+            this.logOutToolStripMenuItem1});
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -110,15 +112,26 @@
             this.PendudukToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PendudukToolStripMenuItem.Click += new System.EventHandler(this.PendudukToolStripMenuItem_Click);
             // 
-            // logOutToolStripMenuItem
+            // PersuratanToolStripMenuItem
             // 
-            this.logOutToolStripMenuItem.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.logOutToolStripMenuItem.Margin = new System.Windows.Forms.Padding(0, 550, 0, 0);
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(144, 30);
-            this.logOutToolStripMenuItem.Text = "Log Out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            this.PersuratanToolStripMenuItem.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersuratanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
+            this.PersuratanToolStripMenuItem.Image = global::SISUPEL.Properties.Resources.Save;
+            this.PersuratanToolStripMenuItem.Margin = new System.Windows.Forms.Padding(3, 5, 0, 0);
+            this.PersuratanToolStripMenuItem.Name = "PersuratanToolStripMenuItem";
+            this.PersuratanToolStripMenuItem.Size = new System.Drawing.Size(141, 30);
+            this.PersuratanToolStripMenuItem.Text = "Persuratan";
+            this.PersuratanToolStripMenuItem.Click += new System.EventHandler(this.PersuratanToolStripMenuItem_Click);
+            // 
+            // logOutToolStripMenuItem1
+            // 
+            this.logOutToolStripMenuItem1.Font = new System.Drawing.Font("Poppins Medium", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOutToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.logOutToolStripMenuItem1.Margin = new System.Windows.Forms.Padding(3, 50, 0, 0);
+            this.logOutToolStripMenuItem1.Name = "logOutToolStripMenuItem1";
+            this.logOutToolStripMenuItem1.Size = new System.Drawing.Size(141, 30);
+            this.logOutToolStripMenuItem1.Text = "Log Out";
+            this.logOutToolStripMenuItem1.Click += new System.EventHandler(this.logOutToolStripMenuItem1_Click);
             // 
             // panel1
             // 
@@ -155,7 +168,8 @@
         private System.Windows.Forms.ToolStripMenuItem KelurahanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TPSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PendudukToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PersuratanToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem1;
     }
 }

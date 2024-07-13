@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PendudukFrm));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.CetakBtn = new System.Windows.Forms.Button();
             this.searchTxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NaTpsCmb = new System.Windows.Forms.ComboBox();
@@ -53,6 +52,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +69,6 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.CetakBtn);
             this.panel2.Controls.Add(this.searchTxt);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.NaTpsCmb);
@@ -92,23 +91,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(845, 379);
             this.panel2.TabIndex = 42;
-            // 
-            // CetakBtn
-            // 
-            this.CetakBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.CetakBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CetakBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CetakBtn.ForeColor = System.Drawing.SystemColors.Window;
-            this.CetakBtn.Image = global::SISUPEL.Properties.Resources.Print;
-            this.CetakBtn.Location = new System.Drawing.Point(507, 262);
-            this.CetakBtn.Name = "CetakBtn";
-            this.CetakBtn.Size = new System.Drawing.Size(146, 41);
-            this.CetakBtn.TabIndex = 55;
-            this.CetakBtn.Text = "Cetak";
-            this.CetakBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.CetakBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.CetakBtn.UseVisualStyleBackColor = false;
-            this.CetakBtn.Click += new System.EventHandler(this.CetakBtn_Click);
             // 
             // searchTxt
             // 
@@ -163,7 +145,7 @@
             this.CancelBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.ForeColor = System.Drawing.SystemColors.Window;
             this.CancelBtn.Image = global::SISUPEL.Properties.Resources.Close;
-            this.CancelBtn.Location = new System.Drawing.Point(358, 262);
+            this.CancelBtn.Location = new System.Drawing.Point(527, 268);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(125, 41);
             this.CancelBtn.TabIndex = 50;
@@ -180,7 +162,7 @@
             this.hapusBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hapusBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.hapusBtn.Image = global::SISUPEL.Properties.Resources.Trash;
-            this.hapusBtn.Location = new System.Drawing.Point(209, 262);
+            this.hapusBtn.Location = new System.Drawing.Point(378, 268);
             this.hapusBtn.Name = "hapusBtn";
             this.hapusBtn.Size = new System.Drawing.Size(129, 41);
             this.hapusBtn.TabIndex = 49;
@@ -197,7 +179,7 @@
             this.simpanBtn.Font = new System.Drawing.Font("Poppins Medium", 9.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpanBtn.ForeColor = System.Drawing.SystemColors.Window;
             this.simpanBtn.Image = global::SISUPEL.Properties.Resources.Save;
-            this.simpanBtn.Location = new System.Drawing.Point(43, 262);
+            this.simpanBtn.Location = new System.Drawing.Point(212, 268);
             this.simpanBtn.Name = "simpanBtn";
             this.simpanBtn.Size = new System.Drawing.Size(143, 41);
             this.simpanBtn.TabIndex = 48;
@@ -332,6 +314,7 @@
             this.Column1,
             this.Column2,
             this.Column3,
+            this.Column7,
             this.Column4,
             this.Column5,
             this.Column6});
@@ -361,7 +344,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 300;
+            this.Column2.Width = 200;
             // 
             // Column3
             // 
@@ -371,6 +354,15 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 150;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "umur";
+            this.Column7.HeaderText = "Umur";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 125;
             // 
             // Column4
             // 
@@ -486,18 +478,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox KodpenTxt;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button CetakBtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.DataGridView PendudukDgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

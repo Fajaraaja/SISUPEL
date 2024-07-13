@@ -21,12 +21,13 @@ namespace SISUPEL.Views
             userrole = role;
         }
 
-        public void menuset(bool mn1, bool mn2,bool mn3,bool mn4)
+        public void menuset(bool mn1, bool mn2,bool mn3,bool mn4,bool m5)
         {
             KelurahanToolStripMenuItem.Visible = mn1;
             TPSToolStripMenuItem.Visible = mn2;
             PendudukToolStripMenuItem.Visible = mn3;
-            logOutToolStripMenuItem.Visible = mn4;
+            PersuratanToolStripMenuItem.Visible = mn4;
+            logOutToolStripMenuItem1.Visible = m5;
         }
 
         private void KelurahanToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,23 +40,7 @@ namespace SISUPEL.Views
             kelurahan.Show();
         }
 
-        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // Tampilkan kotak dialog konfirmasi
-            DialogResult result = MessageBox.Show(
-                "Apakah Anda yakin ingin keluar?",
-                "Konfirmasi Log Out",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
-
-            if (result == DialogResult.Yes)
-            {
-                Loginfrm login = new Loginfrm();
-                login.Show();
-                this.Close();
-            }
-        }
+        
 
         private void TPSToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -75,12 +60,10 @@ namespace SISUPEL.Views
             penduduk.TopLevel = false;
             panel1.Controls.Add(penduduk);
             penduduk.Dock = DockStyle.Fill;
-            if(userrole != "admin")
-            {
-                penduduk.Isvisible();
-            }
             penduduk.Show();
         }
+
+
 
         private void DashboardFrm_Load(object sender, EventArgs e)
         {
@@ -90,6 +73,38 @@ namespace SISUPEL.Views
             panel1.Controls.Add(welcome);
             welcome.Dock = DockStyle.Fill;
             welcome.Show();
+        }
+
+        private void logOutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Apakah Anda yakin ingin keluar?",
+                "Konfirmasi Log Out",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                Loginfrm login = new Loginfrm();
+                login.Show();
+                this.Close();
+            }
+        }
+
+        private void PersuratanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SuratFrm surat = new SuratFrm();
+            panel1.Controls.Clear();
+            surat.TopLevel = false;
+            panel1.Controls.Add(surat);
+            surat.Dock = DockStyle.Fill;
+            surat.Show();
+            if (userrole != "admin")
+            {
+                surat.Isvisible();
+            }
+            surat.Show();
         }
     }
 }

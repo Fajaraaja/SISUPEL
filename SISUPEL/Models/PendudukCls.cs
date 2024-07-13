@@ -17,6 +17,7 @@ namespace SISUPEL.Models
         private string kode_tps;
         private string nama_penduduk;
         private string nik;
+        private string umur;
         private string alamat_penduduk;
 
         LayananCls server;
@@ -32,6 +33,7 @@ namespace SISUPEL.Models
             kode_tps = "";
             nama_penduduk = "";
             nik = "";
+            umur = "";
             alamat_penduduk = "";
         }
 
@@ -56,6 +58,14 @@ namespace SISUPEL.Models
             set
             {
                 nik = value;
+            }
+        }
+
+        public string setumur
+        {
+            set
+            {
+                umur = value;
             }
         }
 
@@ -85,8 +95,16 @@ namespace SISUPEL.Models
 
         public DataTable getallpenduduk()
         {
-            Query =  "SELECT p.kode_penduduk, p.nama_penduduk, p.nik, p.alamat_penduduk,k.nama_kelurahan, t.nama_tps FROM penduduk p " +
+            Query =  "SELECT p.kode_penduduk, p.nama_penduduk, p.nik, p.umur, p.alamat_penduduk,k.nama_kelurahan, t.nama_tps FROM penduduk p " +
                      "JOIN kelurahan k ON p.kode_kelurahan = k.kode_kelurahan JOIN tps t ON p.kode_tps = t.kode_tps";
+
+            return server.eksekusiQuery(Query);
+        }
+
+        public DataTable getpendudukover17()
+        {
+            Query = "SELECT p.kode_penduduk, p.nama_penduduk, p.nik,p.umur, p.alamat_penduduk,k.nama_kelurahan, t.nama_tps FROM penduduk p " +
+                    "JOIN kelurahan k ON p.kode_kelurahan = k.kode_kelurahan JOIN tps t ON p.kode_tps = t.kode_tps WHERE p.umur > 17";
 
             return server.eksekusiQuery(Query);
         }
@@ -107,7 +125,7 @@ namespace SISUPEL.Models
         public int savedata()
         {
             int result = -1;
-            Query = "Insert INTO penduduk values('" + kode_penduduk + "','" + nama_penduduk + "','" + nik + "','" + alamat_penduduk + "','" 
+            Query = "Insert INTO penduduk values('" + kode_penduduk + "','" + nama_penduduk + "','" + nik + "','" + umur + "','" + alamat_penduduk + "','" 
                 + kode_kelurahan + "','" + kode_tps + "')";
 
             try
@@ -125,8 +143,9 @@ namespace SISUPEL.Models
         public int updatedata(string kode)
         {
             int result = -1;
-            Query = "UPDATE penduduk SET nama_penduduk = '" + nama_penduduk + "' , nik = '" + nik + "' , alamat_penduduk = '" + alamat_penduduk + "'," +
-                " kode_kelurahan = '" + kode_kelurahan + "', kode_tps = '" + kode_tps + "'  WHERE kode_penduduk = '" + kode + "'";
+            Query = "UPDATE penduduk SET nama_penduduk = '" + nama_penduduk + "', nik = '" + nik + "', umur = '" + umur + "', alamat_penduduk = '" + alamat_penduduk + "', " +
+                    "kode_kelurahan = '" + kode_kelurahan + "', kode_tps = '" + kode_tps + "' WHERE kode_penduduk = '" + kode + "'";
+
             try
             {
                 result = server.eksekusiNonQuery(Query);
@@ -184,9 +203,19 @@ namespace SISUPEL.Models
 
         public DataTable searchdata(string nama, string kode, string tps)
         {
-            Query = "SELECT p.kode_penduduk, p.nama_penduduk, p.nik, p.alamat_penduduk, k.nama_kelurahan, t.nama_tps FROM penduduk p " +
+            Query = "SELECT p.kode_penduduk, p.nama_penduduk, p.nik, p.umur, p.alamat_penduduk, k.nama_kelurahan, t.nama_tps FROM penduduk p " +
                     "JOIN kelurahan k ON p.kode_kelurahan = k.kode_kelurahan JOIN tps t ON p.kode_tps = t.kode_tps " +
                     "WHERE p.nama_penduduk LIKE '%" + nama + "%' OR k.nama_kelurahan LIKE '%" + kode + "%' OR t.nama_tps LIKE '%" +tps+ "%'";
+
+            return server.eksekusiQuery(Query);
+        }
+
+        public DataTable searchdata17(string nama,string kode, string tps)
+        {
+            string Query = "SELECT p.kode_penduduk, p.nama_penduduk, p.nik, p.umur, p.alamat_penduduk, k.nama_kelurahan, t.nama_tps FROM penduduk p " +
+               "JOIN kelurahan k ON p.kode_kelurahan = k.kode_kelurahan JOIN tps t ON p.kode_tps = t.kode_tps " +
+               "WHERE (p.nama_penduduk LIKE '%" + nama + "%' OR k.nama_kelurahan LIKE '%" + kode + "%' OR t.nama_tps LIKE '%" + tps + "%') AND p.umur > 17";
+
 
             return server.eksekusiQuery(Query);
         }

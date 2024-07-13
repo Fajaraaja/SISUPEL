@@ -33,13 +33,13 @@ namespace SISUPEL.Views
                 DashboardFrm dashboard = new DashboardFrm(role);
                 if (role == "admin")
                 {
-                    dashboard.menuset(true, true, true, true);
+                    dashboard.menuset(true, true, true, true, true);
                     dashboard.Show();
                     this.Hide();
                 }
                 else
                 {
-                    dashboard.menuset(false, false, true, true);
+                    dashboard.menuset(false, false, true, false, true);
                     dashboard.Show();
                     this.Hide();
                 }
